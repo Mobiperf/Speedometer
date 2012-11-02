@@ -89,4 +89,10 @@ public interface Config {
   
   /** Constants for the splash screen */
   public static final long SPLASH_SCREEN_DURATION_MSEC = 1500;
+  
+  // User-Agent for HTTP requests. We emulate a Chrome Mobile UA to trigger behavior on the
+  // server or intermediate proxies which would be seen by a real browser.
+  public static final String HTTP_USER_AGENT = "Mozilla/5.0 (Linux; Android 4.1.1; " +
+    "Nexus S 4G Build/JRO03C) AppleWebKit/537.9 (KHTML, like Gecko) Chrome/23.0.1260.0 " +
+    "Mobile Safari/537.9";
 }

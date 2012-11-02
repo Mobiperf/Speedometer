@@ -159,7 +159,7 @@ public class HttpTask extends MeasurementTask {
       String urlStr = task.url;
           
       // TODO(Wenjie): Need to set timeout for the HTTP methods
-      httpClient = AndroidHttpClient.newInstance(Util.prepareUserAgent(this.parent));
+      httpClient = AndroidHttpClient.newInstance(Config.HTTP_USER_AGENT);
       HttpRequestBase request = null;
       if (task.method.compareToIgnoreCase("head") == 0) {
         request = new HttpHead(urlStr);
